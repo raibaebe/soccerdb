@@ -4,17 +4,20 @@ This project analyzes and visualizes soccer data from **soccer.db** using Python
 It includes charts, interactive plots, and Excel exports with formatting.  
 
 ## Features
-- 📊 Visualizations (Pie, Bar, Line, Histogram, Scatter)
-- 🎥 Interactive Plotly scatter with year slider
-- 📑 Export to Excel with:
+- Visualizations (Pie, Bar, Line, Histogram, Scatter)
+- Interactive Plotly scatter with year slider
+- Export to Excel with:
   - Frozen headers
   - Auto filters
   - Gradient formatting for numeric columns
-- ✅ All data pulled directly from `soccer.db`
+- All data pulled directly from `soccer.db`
 
 ## Project Structure
 ```
 ├── analytics.py        # Main script with charts
+├──charts/            # charts png
+├──exports/          # excel file
+│ └── soccer_report.xlsx 
 ├── export_excel.py     # Excel export with formatting
 ├── requirements.txt    # List of dependencies
 └── README.md           # Documentation
