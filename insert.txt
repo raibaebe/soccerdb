@@ -1,0 +1,5 @@
+INSERT INTO Match (id, country_id, league_id, season, stage, date,
+                   match_api_id, home_team_api_id, away_team_api_id,
+                   home_team_goal, away_team_goal)
+VALUES (2000000, 1, 1, '2015/2016', 1, '2015-08-01',
+        999999, 8634, 9823, 3, 2);

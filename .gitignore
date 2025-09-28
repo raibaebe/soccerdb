@@ -1,0 +1,12 @@
+soccer.db
+*.db
+__pycache__/
+soccer.db
+*.db
+__pycache__/
+*.db
+*.sqlite
+__pycache__/
+*.db
+*.sqlite
+__pycache__/
