@@ -1,5 +1,17 @@
-INSERT INTO Match (id, country_id, league_id, season, stage, date,
-                   match_api_id, home_team_api_id, away_team_api_id,
-                   home_team_goal, away_team_goal)
-VALUES (2000000, 1, 1, '2015/2016', 1, '2015-08-01',
-        999999, 8634, 9823, 3, 2);
+INSERT INTO Match (
+    id, country_id, league_id, season, stage, date,
+    match_api_id, home_team_api_id, away_team_api_id,
+    home_team_goal, away_team_goal
+)
+VALUES (
+    (SELECT MAX(id) + 1 FROM Match),
+    (SELECT country_id FROM League LIMIT 1),   -- pick an existing country
+    (SELECT id FROM League LIMIT 1),           -- pick an existing league
+    '2017/2018',
+    1,
+    '2017-08-01',
+    (SELECT MAX(match_api_id) + 1 FROM Match),
+    (SELECT team_api_id FROM Team LIMIT 1),    -- pick a valid home team
+    (SELECT team_api_id FROM Team LIMIT 1 OFFSET 1), -- pick a different away team
+    5, 4   -- total 9 goals (to make avg noticeable)
+);
